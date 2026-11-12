@@ -418,7 +418,6 @@ function card(p,i){
      <ul class="feats">${fs.map(x=>`<li>${x}</li>`).join('')}</ul>
      <div class="acts">
        <a class="btn btn-wa" href="${waLink(msg)}" target="_blank" rel="noopener">${t('ask')}</a>
-       <a class="lk" href="https://ximenarosalesrealtor.com${p.path}" target="_blank" rel="noopener">${t('view_full')}</a>
      </div>
    </div></article>`;
 }
@@ -442,7 +441,7 @@ function renderGrid(){
 }
 function renderFeatured(){
   const top=DATA.slice().sort((x,y)=>y.priceNum-x.priceNum).slice(0,6);
-  document.getElementById('hsTrack').innerHTML=top.map(p=>`<a class="fc" href="https://ximenarosalesrealtor.com${p.path}" target="_blank" rel="noopener"><img src="assets/${p.imgs[0].f}" alt="${p.addr}, ${p.cityzip.split(',')[0]}" loading="lazy" draggable="false"><div><div class="pz">${money(p.priceNum)}</div><div class="ad">${p.addr}, ${p.cityzip.split(',')[0]}</div><div class="sp">${p.beds} ${t('beds')} · ${p.baths} ${t('baths')}${p.sqft?' · '+fmtSq(p.sqft)+' '+t('sqft'):''}</div><span class="go">${t('view_full')} &rarr;</span></div></a>`).join('');
+  document.getElementById('hsTrack').innerHTML=top.map(p=>`<a class="fc" href="https://ximenarosalesrealtor.com${p.path}" target="_blank" rel="noopener"><img src="assets/${p.imgs[0].f}" alt="${p.addr}, ${p.cityzip.split(',')[0]}" loading="lazy" draggable="false"><div><div class="pz">${money(p.priceNum)}</div><div class="ad">${p.addr}, ${p.cityzip.split(',')[0]}</div><div class="sp">${p.beds} ${t('beds')} · ${p.baths} ${t('baths')}${p.sqft?' · '+fmtSq(p.sqft)+' '+t('sqft'):''}</div></div></a>`).join('');
 }
 function applyLang(){
   document.documentElement.lang=lang;
