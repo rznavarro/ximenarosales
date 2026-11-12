@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Ximena Rosales · Miami Real Estate</title>
+<meta name="description" content="Ximena Rosales, relocation specialist and real estate agent in Miami and South Florida. Browse current listings and write to her on WhatsApp in English or Spanish.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="assets/ximena.webp" type="image/webp">
+<style>
+:root{
+  --bg:#171310; --bg2:#201b17; --ink:#f3ede4; --ink-soft:#c9bfb2;
+  --brand:#736a61; --brand-d:#4f4842; --accent:#d9bf98; --accent-d:#b89a6e;
+  --paper:#f5f0e8; --paper2:#ebe3d7; --text:#2a2420; --muted:#6b6259; --line:#d9cfc0;
+  --wa:#1f8f55; --r:14px;
+  --serif:'Cormorant Garamond',Georgia,serif; --sans:'Manrope',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+button{font:inherit;cursor:pointer}
+.wrap{width:min(1240px,100% - 32px);margin-inline:auto}
+.eyebrow{font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:600}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.05}
+h2{font-size:clamp(2.2rem,5vw,3.6rem)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:48px;padding:.85rem 1.7rem;border-radius:999px;font-weight:600;font-size:.95rem;text-decoration:none;border:1px solid transparent;transition:transform .2s,background .2s,border-color .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-wa:hover{background:#25a566}
+.btn-ghost{border-color:rgba(243,237,228,.45);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+/* nav */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;padding:14px 0;transition:background .3s}
+.nav.solid{background:rgba(23,19,16,.92);backdrop-filter:blur(10px)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.nav img.logo-s{height:44px;width:auto}
+.nav-r{display:flex;align-items:center;gap:14px}
+.nav-links{display:flex;gap:26px;font-size:.88rem}
+.nav-links a{text-decoration:none;color:var(--ink-soft);padding:10px 0}
+.nav-links a:hover{color:var(--accent)}
+.lang{display:inline-flex;border:1px solid rgba(243,237,228,.35);border-radius:999px;overflow:hidden}
+.lang button{background:none;border:0;color:var(--ink-soft);min-width:44px;min-height:44px;font-weight:600;font-size:.8rem;letter-spacing:.08em}
+.lang button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
+@media(max-width:860px){.nav-links{display:none}}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;background:var(--bg)}
+.hero .slides{position:absolute;inset:0}
+.hero .slides img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.6s ease;transform:scale(1.04)}
+.hero .slides img.on{opacity:1;animation:kb 9s ease-out forwards}
+@keyframes kb{from{transform:scale(1.04)}to{transform:scale(1.12)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(23,19,16,.86) 0%,rgba(23,19,16,.55) 45%,rgba(23,19,16,.15) 100%),linear-gradient(0deg,rgba(23,19,16,.8),transparent 45%)}
+.hero-in{position:relative;z-index:2;padding:130px 0 88px;max-width:760px}
+.hero-logo{width:min(440px,78vw);height:auto;margin:0 0 18px -6px}
+.hero h1{font-size:clamp(2.6rem,6.4vw,5rem);margin:10px 0 18px}
+.hero h1 em{color:var(--accent);font-style:italic}
+.hero p.lead{color:var(--ink-soft);font-size:1.08rem;max-width:560px;margin-bottom:30px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px}
+.hero-stats{position:absolute;z-index:2;right:max(16px,calc((100vw - 1240px)/2));bottom:32px;display:flex;gap:10px}
+.hero-stats span{width:34px;height:3px;background:rgba(243,237,228,.3);border-radius:2px}
+.hero-stats span.on{background:var(--accent)}
+@media(max-width:700px){.hero-in{padding-bottom:64px}.hero-stats{display:none}}
+
+/* featured */
+.feat{background:var(--bg2);padding:96px 0 0}
+.feat-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:36px}
+.feat-head p{color:var(--ink-soft);max-width:420px}
+.hs{overflow:hidden}
+.hs-track{display:flex;gap:22px;padding:0 max(16px,calc((100vw - 1240px)/2)) 56px;width:max-content}
+.fc{position:relative;flex:0 0 min(560px,78vw);height:min(62vh,520px);border-radius:var(--r);overflow:hidden;text-decoration:none;display:block;background:#000}
+.fc img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.fc:hover img{transform:scale(1.05)}
+.fc::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(15,12,10,.9),transparent 55%)}
+.fc>div{position:absolute;z-index:2;left:24px;right:24px;bottom:22px}
+.fc .pz{font-family:var(--serif);font-size:2.3rem;line-height:1}
+.fc .ad{font-weight:600;margin-top:6px}
+.fc .sp{color:var(--ink-soft);font-size:.88rem;margin-top:2px}
+.fc .go{display:inline-block;margin-top:10px;color:var(--accent);font-size:.85rem;font-weight:600;letter-spacing:.04em}
+@media(max-width:900px){
+  .hs{overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+  .fc{scroll-snap-align:center;height:420px}
+  .hs-track{padding-bottom:64px}
+}
+
+/* catalog */
+.cat{background:var(--paper);color:var(--text);padding:96px 0}
+.cat .eyebrow{color:var(--brand)}
+.cat h2{color:var(--text)}
+.cat-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:12px}
+.cat-sub{color:var(--muted);max-width:640px;margin:10px 0 28px}
+.tools{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin-bottom:30px;padding-bottom:22px;border-bottom:1px solid var(--line)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{min-height:44px;padding:.5rem 1.1rem;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--text);font-size:.86rem;font-weight:600}
+.chip[aria-pressed=true]{background:var(--brand-d);border-color:var(--brand-d);color:#fff}
+.sort{display:flex;align-items:center;gap:10px;font-size:.86rem;color:var(--muted)}
+.sort select{min-height:44px;padding:0 14px;border-radius:10px;border:1px solid var(--line);background:#fff;font:inherit;color:var(--text)}
+.count{font-size:.86rem;color:var(--muted);margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{background:#fff;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);display:flex;flex-direction:column;box-shadow:0 1px 0 rgba(0,0,0,.02);transition:box-shadow .3s,transform .3s}
+.card:hover{box-shadow:0 18px 40px -22px rgba(42,36,32,.45);transform:translateY(-3px)}
+.card.big{grid-column:span 1}
+.car{position:relative;aspect-ratio:3/2;background:var(--paper2);overflow:hidden;touch-action:pan-y}
+.car .rail{display:flex;height:100%;transition:transform .4s ease}
+.car img{flex:0 0 100%;width:100%;height:100%;object-fit:cover}
+.car .ar{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.92);color:var(--text);font-size:1.2rem;display:grid;place-items:center;opacity:0;transition:opacity .2s}
+.car:hover .ar,.car:focus-within .ar{opacity:1}
+@media(hover:none){.car .ar{opacity:.9}}
+.car .ar.p{left:10px}.car .ar.n{right:10px}
+.dots{position:absolute;left:0;right:0;bottom:10px;display:flex;justify-content:center;gap:6px}
+.dots i{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.55)}
+.dots i.on{background:#fff}
+.tag{position:absolute;top:12px;left:12px;background:rgba(23,19,16,.78);color:#fff;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;padding:5px 10px;border-radius:999px;font-weight:600}
+.cb{padding:20px 22px 22px;display:flex;flex-direction:column;gap:6px;flex:1}
+.cb .price{font-family:var(--serif);font-size:2.05rem;font-weight:600;color:var(--text);line-height:1}
+.cb .addr{font-weight:700;font-size:1rem}
+.cb .zone{color:var(--muted);font-size:.86rem}
+.spec{display:flex;flex-wrap:wrap;gap:6px 16px;margin:10px 0 4px;font-size:.9rem;font-weight:600;padding:10px 0;border-block:1px solid var(--line)}
+.spec span b{font-weight:700}
+.feats{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 14px}
+.feats li{list-style:none;font-size:.76rem;background:var(--paper);border:1px solid var(--line);color:var(--brand-d);padding:4px 10px;border-radius:999px;font-weight:600}
+.acts{display:flex;flex-direction:column;gap:6px;margin-top:auto}
+.acts .btn{width:100%}
+.acts .lk{display:flex;align-items:center;justify-content:center;min-height:44px;font-size:.86rem;font-weight:600;color:var(--brand-d);text-decoration:underline;text-underline-offset:4px}
+.mls{font-size:.68rem;color:var(--muted);margin-top:6px;text-align:center}
+/* first cards bigger */
+.grid .card.big:nth-child(1),.grid .card.big:nth-child(2){grid-column:span 1}
+@media(min-width:1000px){
+  .grid.feat-layout .card.big:nth-child(-n+3){grid-column:span 1}
+  .grid.feat-layout .card.big:nth-child(-n+3) .car{aspect-ratio:4/3}
+  .grid.feat-layout .card.big:nth-child(-n+3) .price{font-size:2.5rem}
+}
+@media(max-width:1000px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.grid{grid-template-columns:1fr}}
+.disc{margin-top:36px;font-size:.78rem;color:var(--muted);max-width:820px}
+
+/* zones */
+.zones{background:var(--bg);padding:96px 0}
+.zrow{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:26px 4px;border-bottom:1px solid rgba(243,237,228,.15);text-decoration:none;min-height:44px;transition:padding .3s,color .3s}
+.zrow:first-of-type{border-top:1px solid rgba(243,237,228,.15)}
+.zrow:hover{padding-left:18px;color:var(--accent)}
+.zrow h3{font-size:clamp(1.9rem,4vw,3rem)}
+.zrow small{color:var(--ink-soft);font-size:.9rem}
+.zrow .ar2{font-size:1.5rem;color:var(--accent)}
+.zones .eyebrow{display:block;margin-bottom:10px}
+.zones h2{margin-bottom:34px}
+
+/* about */
+.about{background:var(--bg2);padding:96px 0}
+.about-g{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:center}
+.ph{position:relative;aspect-ratio:1/1;max-width:430px}
+.ph img{width:100%;height:100%;object-fit:cover;border-radius:50%;border:1px solid rgba(217,191,152,.5);padding:10px}
+.about h2{margin:8px 0 18px}
+.about p{color:var(--ink-soft);margin-bottom:14px}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 6px}
+.facts li{list-style:none;border:1px solid rgba(243,237,228,.25);padding:7px 15px;border-radius:999px;font-size:.84rem}
+.quotes{margin-top:44px;display:grid;gap:0}
+blockquote{font-family:var(--serif);font-size:clamp(1.5rem,2.6vw,2.1rem);line-height:1.2;padding:22px 0 22px 22px;border-left:2px solid var(--accent)}
+blockquote+blockquote{margin-top:6px}
+.qn{font-size:.78rem;color:var(--ink-soft);margin-top:14px}
+@media(max-width:860px){.about-g{grid-template-columns:1fr;gap:34px}.ph{max-width:260px}}
+
+/* contact */
+.contact{background:linear-gradient(180deg,var(--brand-d),#3c3631);padding:96px 0;text-align:center}
+.contact h2{margin:10px 0 16px}
+.contact p{color:#e3dacd;max-width:560px;margin:0 auto 28px}
+.contact .hero-cta{justify-content:center}
+.clist{margin-top:44px;display:flex;flex-wrap:wrap;gap:12px 34px;justify-content:center;font-size:.95rem}
+.clist a{text-decoration:none;padding:10px 0;min-height:44px;display:inline-flex;align-items:center;border-bottom:1px solid rgba(243,237,228,.3)}
+.clist a:hover{color:var(--accent);border-color:var(--accent)}
+footer{background:#100d0b;padding:44px 0 90px;color:var(--ink-soft);font-size:.82rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:center}
+footer img{height:46px;width:auto}
+.float{position:fixed;right:16px;bottom:16px;z-index:60;width:58px;height:58px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 10px 26px rgba(0,0,0,.4);transition:transform .2s}
+.float:hover{transform:scale(1.07)}
+.float svg{width:30px;height:30px;fill:#fff}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s ease}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .rv{opacity:1;transform:none}
+  .hero .slides img.on{animation:none}
+}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"RealEstateAgent","name":"Ximena Rosales","description":"Real Estate Agent & Specialized Relocation Expert in Miami and North Carolina.","telephone":"+1-786-671-7722","email":"ximena@ximenarosalesrealtor.com","url":"https://ximenarosalesrealtor.com/","image":"assets/ximena.webp","knowsLanguage":["English","Spanish"],"address":{"@type":"PostalAddress","streetAddress":"420 SW 7th St, Suite 1111","addressLocality":"Miami","addressRegion":"FL","postalCode":"33130","addressCountry":"US"},"areaServed":["Miami","Broward County","West Palm Beach","Raleigh","Wake Forest","Cary","Durham"],"sameAs":["https://www.facebook.com/XimenaRosalesRealtor/","https://www.instagram.com/ximenarosalesrealtor/","https://www.linkedin.com/in/ximenarosalesrealtor/","https://www.youtube.com/channel/UCqynXQ2ZE20TEpafAoMHZ6Q"]}
+</script>
+</head>
+<body>
+
+<header class="nav" id="nav"><div class="wrap">
+  <a href="#top" aria-label="Ximena Rosales"><img class="logo-s" src="assets/logo-white.webp" alt="Ximena Rosales" width="180" height="64"></a>
+  <div class="nav-r">
+    <nav class="nav-links" aria-label="Main">
+      <a href="#featured" data-i18n="nav_feat">Featured</a>
+      <a href="#catalog" data-i18n="nav_cat">Listings</a>
+      <a href="#areas" data-i18n="nav_areas">Areas</a>
+      <a href="#about" data-i18n="nav_about">About</a>
+      <a href="#contact" data-i18n="nav_contact">Contact</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language"><button data-lang="en" aria-pressed="true">EN</button><button data-lang="es" aria-pressed="false">ES</button></div>
+  </div>
+</div></header>
+
+<main id="top">
+<section class="hero" aria-label="Intro">
+  <div class="slides">
+    <img class="on" src="assets/hero-1.webp" alt="Coconut Grove waterfront towers, Miami" fetchpriority="high">
+    <img src="assets/hero-2.webp" alt="Brickell rooftop pool and Miami skyline" loading="lazy">
+    <img src="assets/hero-3.webp" alt="South Miami home entrance at sunset" loading="lazy">
+  </div>
+  <div class="wrap"><div class="hero-in">
+    <img class="hero-logo" src="assets/logo-white.webp" alt="Ximena Rosales" width="440" height="157">
+    <span class="eyebrow" data-i18n="hero_eye">Relocation specialist · Miami &amp; South Florida</span>
+    <h1 data-i18n-html="hero_h1">Find your home in <em>Miami</em>, with someone who speaks your language.</h1>
+    <p class="lead" data-i18n="hero_lead">Ximena helps buyers and sellers across Miami-Dade, Broward and Palm Beach, in English and Spanish.</p>
+    <div class="hero-cta">
+      <a class="btn btn-wa" id="heroWa" href="#" target="_blank" rel="noopener" data-i18n="cta_wa">Message on WhatsApp</a>
+      <a class="btn btn-ghost" href="#catalog" data-i18n="cta_cat">See current listings</a>
+    </div>
+  </div>
+  <div class="hero-stats" aria-hidden="true"><span class="on"></span><span></span><span></span></div></div>
+</section>
+
+<section class="feat" id="featured">
+  <div class="wrap feat-head rv">
+    <div><span class="eyebrow" data-i18n="feat_eye">Highest priced</span><h2 data-i18n="feat_h">Featured homes</h2></div>
+    <p data-i18n="feat_p">The most notable listings right now, from the Miami collection. Each one opens its full listing.</p>
+  </div>
+  <div class="hs" id="hs"><div class="hs-track" id="hsTrack"></div></div>
+</section>
+
+<section class="cat" id="catalog">
+  <div class="wrap">
+    <div class="cat-head rv"><div><span class="eyebrow" data-i18n="cat_eye">Current listings</span><h2 data-i18n="cat_h">Miami listings</h2></div></div>
+    <p class="cat-sub rv" data-i18n="cat_sub">All listings in South Florida shown on Ximena's site, ordered by price. Ask about any of them on WhatsApp.</p>
+    <div class="tools">
+      <div class="chips" id="chips" role="group" aria-label="Filter by area"></div>
+      <label class="sort"><span data-i18n="sort">Order</span>
+        <select id="sort"><option value="hi" data-i18n="s_hi">Price: high to low</option><option value="lo" data-i18n="s_lo">Price: low to high</option></select></label>
+    </div>
+    <p class="count" id="count" aria-live="polite"></p>
+    <div class="grid feat-layout" id="grid"></div>
+    <p class="disc" data-i18n="disc">Listing information as published on ximenarosalesrealtor.com (SEF MLS feed). Information is deemed reliable but not guaranteed. Prices and availability may change; open each full listing for current details.</p>
+  </div>
+</section>
+
+<section class="zones" id="areas">
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="z_eye">Where she works</span>
+    <h2 data-i18n="z_h">South Florida areas</h2>
+    <a class="zrow rv" href="https://ximenarosalesrealtor.com/houses-for-sale-in-miami-florida/" target="_blank" rel="noopener"><div><h3>Miami</h3><small data-i18n="z_mia">Houses for sale in Miami</small></div><span class="ar2" aria-hidden="true">&rarr;</span></a>
+    <a class="zrow rv" href="https://ximenarosalesrealtor.com/property-search-broward-county/" target="_blank" rel="noopener"><div><h3>Broward County</h3><small data-i18n="z_bro">Property search in Broward</small></div><span class="ar2" aria-hidden="true">&rarr;</span></a>
+    <a class="zrow rv" href="https://ximenarosalesrealtor.com/house-for-sale-west-palm-beach/" target="_blank" rel="noopener"><div><h3>West Palm Beach</h3><small data-i18n="z_wpb">Houses for sale in West Palm Beach</small></div><span class="ar2" aria-hidden="true">&rarr;</span></a>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-g">
+      <div class="ph rv"><img src="assets/ximena.webp" alt="Ximena Rosales, real estate agent" loading="lazy" width="512" height="512"></div>
+      <div class="rv">
+        <span class="eyebrow" data-i18n="ab_eye">About</span>
+        <h2>Ximena Rosales</h2>
+        <p data-i18n="ab_p1">Real Estate Agent &amp; Specialized Relocation Expert. With more than 10 years of experience helping clients buy and sell homes in the North Carolina Triangle area and South Florida, she focuses on top-notch customer service.</p>
+        <p data-i18n="ab_p2">She is a certified Seller Representative Specialist (SRS, a NAR certification) and uses technology to offer faster, more efficient and secure services.</p>
+        <ul class="facts"><li>SRS</li><li>e-Pro</li><li>PSA</li><li data-i18n="f_lang">English &amp; Spanish</li><li data-i18n="f_yrs">10+ years in real estate</li></ul>
+      </div>
+    </div>
+    <div class="quotes">
+      <blockquote class="rv" data-i18n="q1">&ldquo;Ximena is a first-rate real estate professional. As a native Spanish speaker who is also fluent in English, she is versatile.&rdquo;</blockquote>
+      <blockquote class="rv" data-i18n="q2">&ldquo;Ximena is great help in selling my home. I am happy with her services and will be using her again in the future.&rdquo;</blockquote>
+      <blockquote class="rv" data-i18n="q3">&ldquo;We were looking to relocate to Raleigh from out of state and Ximena was great at working with our pace. Would recommend her as a buying agent.&rdquo;</blockquote>
+      <p class="qn" data-i18n="qn">Excerpts of client reviews on Ximena's website.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap rv">
+    <span class="eyebrow" data-i18n="c_eye">Let's talk</span>
+    <h2 data-i18n="c_h">Tell her what you are looking for</h2>
+    <p data-i18n="c_p">Write in English or Spanish. She will reply with options that fit your plan.</p>
+    <div class="hero-cta">
+      <a class="btn btn-wa" id="contactWa" href="#" target="_blank" rel="noopener" data-i18n="cta_wa">Message on WhatsApp</a>
+      <a class="btn btn-ghost" href="tel:+17866717722">+1 (786) 671-7722</a>
+    </div>
+    <div class="clist">
+      <a href="mailto:ximena@ximenarosalesrealtor.com">ximena@ximenarosalesrealtor.com</a>
+      <a href="https://www.instagram.com/ximenarosalesrealtor/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.facebook.com/XimenaRosalesRealtor/" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.linkedin.com/in/ximenarosalesrealtor/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.youtube.com/channel/UCqynXQ2ZE20TEpafAoMHZ6Q" target="_blank" rel="noopener">YouTube</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">
+  <img src="assets/logo-white.webp" alt="Ximena Rosales" width="130" height="46" loading="lazy">
+  <div>420 SW 7th St, Suite 1111, Miami, FL 33130 · +1 (786) 671-7722</div>
+  <div data-i18n="foot">Demo redesign. Listing data from ximenarosalesrealtor.com.</div>
+</div></footer>
+
+<a class="float" id="floatWa" href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.04 3C9.4 3 4 8.38 4 15c0 2.27.64 4.4 1.76 6.2L4 29l8-1.7A12 12 0 0 0 16.04 27C22.66 27 28 21.62 28 15S22.66 3 16.04 3zm0 21.7c-1.2 0-2.4-.3-3.4-.86l-.24-.14-4.74 1 1.02-4.6-.16-.26A9.6 9.6 0 0 1 6.4 15c0-5.3 4.3-9.6 9.64-9.6S25.6 9.7 25.6 15s-4.3 9.7-9.56 9.7zm5.3-7.2c-.3-.14-1.7-.84-1.98-.94-.26-.1-.46-.14-.66.14s-.76.94-.94 1.14c-.16.2-.34.2-.64.06a7.9 7.9 0 0 1-3.9-3.4c-.3-.5.3-.46.84-1.5.1-.2.04-.36-.02-.5-.08-.14-.66-1.6-.9-2.18-.24-.58-.48-.5-.66-.5h-.56c-.2 0-.5.08-.76.36s-1 .98-1 2.4 1.02 2.8 1.16 3 2 3.06 4.9 4.3c1.8.8 2.5.86 3.4.72.54-.08 1.7-.7 1.94-1.38.24-.66.24-1.24.16-1.36-.06-.12-.26-.2-.56-.34z"/></svg></a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+const WA='17866717722';
+const DATA=[{"id":"A12122043","path":"/properties/listing/SEF/A12122043/Miami/700-NE-24th-St-4702","addr":"700 NE 24th St 4702","cityzip":"Miami, FL 33137","zone":"Miami","priceNum":3900000,"beds":"4","baths":"6","sqft":null,"year":"2025","hoa":"$3,070 monthly","lot":null,"type":"Condominium","view":"WaterBayOcean","waterfront":"Yes","pool":"Association","security":"Fire AlarmSecured Garage/ParkingKey Card EntrySecurity GuardSecurity Fence","assocAmen":"Basketball CourtCabanaFitness CenterBarbecuePicnic AreaPlaygroundPoolSaunaSpa/Hot TubTennis Court(s)Elevator(s)ManagementHot Water","imgs":[{"f":"p/A12122043-1.webp"},{"f":"p/A12122043-2.webp"},{"f":"p/A12122043-3.webp"},{"f":"p/A12122043-4.webp"},{"f":"p/A12122043-5.webp"}]},{"id":"A12121973","path":"/properties/listing/SEF/A12121973/Miami/19648-NE-14th-Ave","addr":"19648 NE 14th Ave","cityzip":"Miami, FL 33179","zone":"Miami","priceNum":2598000,"beds":"5","baths":"4","sqft":"4,095 sqft","year":"2026","hoa":"$1,350 monthly","lot":"0.1492 Acres","type":"Single Family Residence","view":"None","pool":"In GroundCommunityPrivate","security":"Gated CommunitySmoke Detector(s)","assocAmen":"Maintenance","imgs":[{"f":"p/A12121973-1.webp"},{"f":"p/A12121973-2.webp"},{"f":"p/A12121973-3.webp"},{"f":"p/A12121973-4.webp"},{"f":"p/A12121973-5.webp"}]},{"id":"A12121930","path":"/properties/listing/SEF/A12121930/Miami/19684-NE-14th-Ave","addr":"19684 NE 14th Ave","cityzip":"Miami, FL 33179","zone":"Miami","priceNum":2410000,"beds":"4","baths":"4","sqft":"3,600 sqft","year":"2026","hoa":"$1,350 monthly","lot":"0.1492 Acres","type":"Single Family Residence","view":"None","pool":"In GroundCommunityPrivate","security":"Fire Sprinkler SystemSecurity GateGated CommunitySmoke Detector(s)Security Guard","imgs":[{"f":"p/A12121930-1.webp"},{"f":"p/A12121930-2.webp"},{"f":"p/A12121930-3.webp"},{"f":"p/A12121930-4.webp"},{"f":"p/A12121930-5.webp"}]},{"id":"A12121902","path":"/properties/listing/SEF/A12121902/Miami/19668-NE-14th-Ave","addr":"19668 NE 14th Ave","cityzip":"Miami, FL 33179","zone":"Miami","priceNum":2240000,"beds":"5","baths":"5","sqft":"3,550 sqft","year":"2026","hoa":"$1,350 monthly","lot":"0.1492 Acres","type":"Single Family Residence","view":"Other","pool":"CommunityPrivate","security":"Gated CommunitySmoke Detector(s)","imgs":[{"f":"p/A12121902-1.webp"},{"f":"p/A12121902-2.webp"},{"f":"p/A12121902-3.webp"},{"f":"p/A12121902-4.webp"},{"f":"p/A12121902-5.webp"}]},{"id":"A12122611","path":"/properties/listing/SEF/A12122611/Doral/8020-NW-46th-Ter","addr":"8020 NW 46th Ter","cityzip":"Doral, FL 33166","zone":"Doral","priceNum":1775000,"beds":"4","baths":"3","sqft":"3,282 sqft","year":"2022","hoa":"$385 monthly","lot":"0.1177 Acres","type":"Single Family Residence","view":"None","pool":"In GroundCommunityPrivate","security":"Security System LeasedSmoke Detector(s)","imgs":[{"f":"p/A12122611-1.webp"},{"f":"p/A12122611-2.webp"},{"f":"p/A12122611-3.webp"},{"f":"p/A12122611-4.webp"},{"f":"p/A12122611-5.webp"}]},{"id":"A12121839","path":"/properties/listing/SEF/A12121839/Miami/11113-Biscayne-Blvd-PH5","addr":"11113 Biscayne Blvd PH5","cityzip":"Miami, FL 33181","zone":"Miami","priceNum":1750000,"beds":"3","baths":"3","sqft":"4,026 sqft","year":"1982","hoa":"$4,485 monthly","lot":null,"type":"Condominium","view":"BayOtherSkyline","waterfront":"Yes","pool":"AssociationHeated","security":"Security GuardSecurity Fence","assocAmen":"ClubhouseFitness CenterPoolSaunaStorageElevator(s)ManagementParking","imgs":[{"f":"p/A12121839-1.webp"},{"f":"p/A12121839-2.webp"},{"f":"p/A12121839-3.webp"},{"f":"p/A12121839-4.webp"},{"f":"p/A12121839-5.webp"}]},{"id":"A12122676","path":"/properties/listing/SEF/A12122676/Hialeah/765-W-23rd-St","addr":"765 W 23rd St","cityzip":"Hialeah, FL 33010","zone":"Hialeah","priceNum":1500000,"beds":"3","baths":"2","sqft":"2,561 sqft","year":"1937","hoa":null,"lot":"0.5 Acres","type":"Single Family Residence","view":"None","pool":"None","imgs":[{"f":"p/A12122676-1.webp"},{"f":"p/A12122676-2.webp"},{"f":"p/A12122676-3.webp"},{"f":"p/A12122676-4.webp"},{"f":"p/A12122676-5.webp"}]},{"id":"A12122766","path":"/properties/listing/SEF/A12122766/South-Miami/4801-SW-64th-Ct","addr":"4801 SW 64th Ct","cityzip":"South Miami, FL 33155","zone":"South Miami","priceNum":1299000,"beds":"3","baths":"2","sqft":"1,639 sqft","year":"1964","hoa":null,"lot":"0.2525 Acres","type":"Single Family Residence","view":"Garden","pool":"None","imgs":[{"f":"p/A12122766-1.webp"},{"f":"p/A12122766-2.webp"},{"f":"p/A12122766-3.webp"},{"f":"p/A12122766-4.webp"},{"f":"p/A12122766-5.webp"}]},{"id":"A12122716","path":"/properties/listing/SEF/A12122716/Miami/718-NE-87th-St","addr":"718 NE 87th St","cityzip":"Miami, FL 33138","zone":"Miami","priceNum":1275000,"beds":"3","baths":"2","sqft":"1,790 sqft","year":"1937","hoa":null,"lot":"0.1607 Acres","type":"Single Family Residence","view":"Garden","pool":"None","imgs":[{"f":"p/A12122716-1.webp"},{"f":"p/A12122716-2.webp"},{"f":"p/A12122716-3.webp"},{"f":"p/A12122716-4.webp"},{"f":"p/A12122716-5.webp"}]},{"id":"A12122479","path":"/properties/listing/SEF/A12122479/Miami/9955-SW-74th-St","addr":"9955 SW 74th St","cityzip":"Miami, FL 33173","zone":"Miami","priceNum":1265000,"beds":"5","baths":"3","sqft":"3,343 sqft","year":"1960","hoa":null,"lot":"0.382 Acres","type":"Single Family Residence","view":"GardenPool","pool":"In GroundPrivate","security":"Smoke Detector(s)","imgs":[{"f":"p/A12122479-1.webp"},{"f":"p/A12122479-2.webp"},{"f":"p/A12122479-3.webp"},{"f":"p/A12122479-4.webp"},{"f":"p/A12122479-5.webp"}]},{"id":"A12120478","path":"/properties/listing/SEF/A12120478/Miami/11025-SW-51st-Ter","addr":"11025 SW 51st Ter","cityzip":"Miami, FL 33165","zone":"Miami","priceNum":1200000,"beds":"4","baths":"3","sqft":"2,230 sqft","year":"1959","hoa":null,"lot":"0.2879 Acres","type":"Single Family Residence","view":"Lake","waterfront":"Yes","pool":"In GroundPrivate","imgs":[{"f":"p/A12120478-1.webp"},{"f":"p/A12120478-2.webp"},{"f":"p/A12120478-3.webp"},{"f":"p/A12120478-4.webp"},{"f":"p/A12120478-5.webp"}]},{"id":"A12121253","path":"/properties/listing/SEF/A12121253/Coconut-Grove/2831-S-Bayshore-Dr-707","addr":"2831 S Bayshore Dr 707","cityzip":"Coconut Grove, FL 33133","zone":"Coconut Grove","priceNum":1200000,"beds":"1","baths":"1","sqft":"695 sqft","year":"2018","hoa":"$2,147 monthly","lot":null,"type":"Condominium","view":"Bay","waterfront":"Yes","pool":"Heated","security":"Secured Garage/ParkingKey Card EntrySmoke Detector(s)","assocAmen":"ClubhouseFitness CenterOtherPlaygroundPool","imgs":[{"f":"p/A12121253-1.webp"},{"f":"p/A12121253-2.webp"},{"f":"p/A12121253-3.webp"},{"f":"p/A12121253-4.webp"},{"f":"p/A12121253-5.webp"}]},{"id":"A12122679","path":"/properties/listing/SEF/A12122679/Miami/2980-SW-141st-Ct","addr":"2980 SW 141st Ct","cityzip":"Miami, FL 33175","zone":"Miami","priceNum":1100000,"beds":"5","baths":"4","sqft":"2,220 sqft","year":"1989","hoa":null,"lot":"0.1921 Acres","type":"Single Family Residence","view":"None","pool":"In GroundPrivate","security":"Smoke Detector(s)","imgs":[{"f":"p/A12122679-1.webp"},{"f":"p/A12122679-2.webp"},{"f":"p/A12122679-3.webp"},{"f":"p/A12122679-4.webp"},{"f":"p/A12122679-5.webp"}]},{"id":"A12122481","path":"/properties/listing/SEF/A12122481/Miami-Gardens/3200-NW-213th-St","addr":"3200 NW 213th St","cityzip":"Miami Gardens, FL 33056","zone":"Miami Gardens","priceNum":800000,"beds":"4","baths":"3","sqft":null,"year":"2026","hoa":null,"lot":"0.1825 Acres","type":"Single Family Residence","view":"Garden","pool":"None","imgs":[{"f":"p/A12122481-1.webp"},{"f":"p/A12122481-2.webp"},{"f":"p/A12122481-3.webp"},{"f":"p/A12122481-4.webp"},{"f":"p/A12122481-5.webp"}]},{"id":"A12115721","path":"/properties/listing/SEF/A12115721/Miami/1621-SW-2nd-Ave-410","addr":"1621 SW 2nd Ave 410","cityzip":"Miami, FL 33129","zone":"Miami","priceNum":750000,"beds":"1","baths":"1","sqft":null,"year":"2026","hoa":"$1,042 monthly","lot":null,"type":"Condominium","view":"Skyline","pool":"Association","security":"Key Card Entry","assocAmen":"Elevator(s)Fitness CenterOtherPool","imgs":[{"f":"p/A12115721-1.webp"},{"f":"p/A12115721-2.webp"},{"f":"p/A12115721-3.webp"},{"f":"p/A12115721-4.webp"},{"f":"p/A12115721-5.webp"}]},{"id":"A12122733","path":"/properties/listing/SEF/A12122733/Hialeah/395-W-39th-Pl","addr":"395 W 39th Pl","cityzip":"Hialeah, FL 33012","zone":"Hialeah","priceNum":715000,"beds":"4","baths":"2","sqft":"1,922 sqft","year":"1974","hoa":null,"lot":"0.1653 Acres","type":"Single Family Residence","view":"Garden","pool":"None","imgs":[{"f":"p/A12122733-1.webp"},{"f":"p/A12122733-2.webp"},{"f":"p/A12122733-3.webp"},{"f":"p/A12122733-4.webp"},{"f":"p/A12122733-5.webp"}]},{"id":"A12122566","path":"/properties/listing/SEF/A12122566/Miami-Beach/5600-Collins-Ave-3E","addr":"5600 Collins Ave 3E","cityzip":"Miami Beach, FL 33140","zone":"Miami Beach","priceNum":649000,"beds":"2","baths":"2","sqft":"1,650 sqft","year":"1967","hoa":"$1,882 monthly","lot":null,"type":"Condominium","view":"Skyline","waterfront":"Yes","pool":"AssociationHeated","security":"Key Card Entry","assocAmen":"BoatingBoat DockBilliard RoomMarinaClubhouseFitness CenterPoolHot Water","imgs":[{"f":"p/A12122566-1.webp"},{"f":"p/A12122566-2.webp"},{"f":"p/A12122566-3.webp"},{"f":"p/A12122566-4.webp"},{"f":"p/A12122566-5.webp"}]},{"id":"A12122692","path":"/properties/listing/SEF/A12122692/Miami-Lakes/16406-Bridge-End-Rd","addr":"16406 Bridge End Rd","cityzip":"Miami Lakes, FL 33014","zone":"Miami Lakes","priceNum":640000,"beds":"4","baths":"3","sqft":"2,085 sqft","year":"1977","hoa":"$80 monthly","lot":null,"type":"Townhouse","view":"Lake","waterfront":"Yes","security":"Security Guard","assocAmen":"None","imgs":[{"f":"p/A12122692-1.webp"},{"f":"p/A12122692-2.webp"},{"f":"p/A12122692-3.webp"},{"f":"p/A12122692-4.webp"},{"f":"p/A12122692-5.webp"}]},{"id":"A12122806","path":"/properties/listing/SEF/A12122806/Miami/22644-SW-109th-Path","addr":"22644 SW 109th Path","cityzip":"Miami, FL 33170","zone":"Miami","priceNum":599000,"beds":"4","baths":"3","sqft":"2,484 sqft","year":"2007","hoa":null,"lot":"0.1154 Acres","type":"Single Family Residence","view":"Garden","pool":"None","imgs":[{"f":"p/A12122806-1.webp"},{"f":"p/A12122806-2.webp"},{"f":"p/A12122806-3.webp"},{"f":"p/A12122806-4.webp"},{"f":"p/A12122806-5.webp"}]},{"id":"A12122667","path":"/properties/listing/SEF/A12122667/Miami/1111-SW-1st-Ave-3216","addr":"1111 SW 1st Ave 3216","cityzip":"Miami, FL 33130","zone":"Miami","priceNum":590000,"beds":"2","baths":"2","sqft":"1,024 sqft","year":"2008","hoa":"$1,203 monthly","lot":null,"type":"Condominium","view":"Water","pool":"AssociationHeated","security":"Security GuardSmoke Detector(s)","assocAmen":"CabanaClubhouseElevator(s)Fitness CenterBarbecuePicnic AreaPlaygroundPoolSpa/Hot TubTrashParking","imgs":[{"f":"p/A12122667-1.webp"},{"f":"p/A12122667-2.webp"},{"f":"p/A12122667-3.webp"},{"f":"p/A12122667-4.webp"},{"f":"p/A12122667-5.webp"}]},{"id":"A12122690","path":"/properties/listing/SEF/A12122690/Hialeah/4719-E-8th-Ct","addr":"4719 E 8th Ct","cityzip":"Hialeah, FL 33013","zone":"Hialeah","priceNum":574900,"beds":"5","baths":"3","sqft":"1,514 sqft","year":"1955","hoa":null,"lot":"0.1148 Acres","type":"Single Family Residence","view":"Other","pool":"None","imgs":[{"f":"p/A12122690-1.webp"},{"f":"p/A12122690-2.webp"},{"f":"p/A12122690-3.webp"},{"f":"p/A12122690-4.webp"},{"f":"p/A12122690-5.webp"}]},{"id":"A12111372","path":"/properties/listing/SEF/A12111372/Homestead/11669-SW-247th-St","addr":"11669 SW 247th St","cityzip":"Homestead, FL 33032","zone":"Homestead","priceNum":570000,"beds":"4","baths":"3","sqft":"2,575 sqft","year":"2017","hoa":"$90 monthly","lot":"0.1021 Acres","type":"Single Family Residence","view":"Garden","pool":"None","security":"Security System LeasedSecurity Guard","imgs":[{"f":"p/A12111372-1.webp"},{"f":"p/A12111372-2.webp"},{"f":"p/A12111372-3.webp"},{"f":"p/A12111372-4.webp"},{"f":"p/A12111372-5.webp"}]},{"id":"A12122742","path":"/properties/listing/SEF/A12122742/Miami/500-Brickell-Ave-3400","addr":"500 Brickell Ave 3400","cityzip":"Miami, FL 33131","zone":"Miami","priceNum":547000,"beds":"1","baths":"1","sqft":"806 sqft","year":"2008","hoa":"$1,022 monthly","lot":null,"type":"Condominium","view":"Water","pool":"Association","security":"Key Card EntryOther","assocAmen":"ClubhouseElevator(s)Fitness CenterOtherPoolSaunaSpa/Hot Tub","imgs":[{"f":"p/A12122742-1.webp"},{"f":"p/A12122742-2.webp"},{"f":"p/A12122742-3.webp"},{"f":"p/A12122742-4.webp"},{"f":"p/A12122742-5.webp"}]},{"id":"A12120458","path":"/properties/listing/SEF/A12120458/Hialeah/3265-W-100th-Ter","addr":"3265 W 100th Ter","cityzip":"Hialeah, FL 33018","zone":"Hialeah","priceNum":540000,"beds":"3","baths":"3","sqft":"1,583 sqft","year":"2019","hoa":"$180 monthly","lot":null,"type":"Townhouse","view":"Lake","waterfront":"Yes","pool":"Association","security":"Security GuardSmoke Detector(s)","assocAmen":"ClubhouseFitness CenterBarbecuePicnic AreaPlaygroundPoolSpa/Hot TubManagement","imgs":[{"f":"p/A12120458-1.webp"},{"f":"p/A12120458-2.webp"},{"f":"p/A12120458-3.webp"},{"f":"p/A12120458-4.webp"},{"f":"p/A12120458-5.webp"}]},{"id":"A12121795","path":"/properties/listing/SEF/A12121795/Homestead/14800-SW-296th-St","addr":"14800 SW 296th St","cityzip":"Homestead, FL 33033","zone":"Homestead","priceNum":535000,"beds":"4","baths":"3","sqft":"1,489 sqft","year":"1955","hoa":null,"lot":"0.1808 Acres","type":"Single Family Residence","view":"None","pool":"None","imgs":[{"f":"p/A12121795-1.webp"},{"f":"p/A12121795-2.webp"},{"f":"p/A12121795-3.webp"},{"f":"p/A12121795-4.webp"},{"f":"p/A12121795-5.webp"}]}];
+const I18N={
+ en:{nav_feat:'Featured',nav_cat:'Listings',nav_areas:'Areas',nav_about:'About',nav_contact:'Contact',
+  hero_eye:'Relocation specialist · Miami & South Florida',
+  hero_h1:'Find your home in <em>Miami</em>, with someone who speaks your language.',
+  hero_lead:'Ximena helps buyers and sellers across Miami-Dade, Broward and Palm Beach, in English and Spanish.',
+  cta_wa:'Message on WhatsApp',cta_cat:'See current listings',
+  feat_eye:'Highest priced',feat_h:'Featured homes',feat_p:'The most notable listings right now, from the Miami collection. Each one opens its full listing.',
+  cat_eye:'Current listings',cat_h:'Miami listings',cat_sub:"All listings in South Florida shown on Ximena's site, ordered by price. Ask about any of them on WhatsApp.",
+  sort:'Order',s_hi:'Price: high to low',s_lo:'Price: low to high',
+  disc:'Listing information as published on ximenarosalesrealtor.com (SEF MLS feed). Information is deemed reliable but not guaranteed. Prices and availability may change; open each full listing for current details.',
+  z_eye:'Where she works',z_h:'South Florida areas',z_mia:'Houses for sale in Miami',z_bro:'Property search in Broward',z_wpb:'Houses for sale in West Palm Beach',
+  ab_eye:'About',ab_p1:'Real Estate Agent & Specialized Relocation Expert. With more than 10 years of experience helping clients buy and sell homes in the North Carolina Triangle area and South Florida, she focuses on top-notch customer service.',
+  ab_p2:'She is a certified Seller Representative Specialist (SRS, a NAR certification) and uses technology to offer faster, more efficient and secure services.',
+  f_lang:'English & Spanish',f_yrs:'10+ years in real estate',
+  q1:'“Ximena is a first-rate real estate professional. As a native Spanish speaker who is also fluent in English, she is versatile.”',
+  q2:'“Ximena is great help in selling my home. I am happy with her services and will be using her again in the future.”',
+  q3:'“We were looking to relocate to Raleigh from out of state and Ximena was great at working with our pace. Would recommend her as a buying agent.”',
+  qn:"Excerpts of client reviews on Ximena's website.",
+  c_eye:"Let's talk",c_h:'Tell her what you are looking for',c_p:'Write in English or Spanish. She will reply with options that fit your plan.',
+  foot:'Demo redesign. Listing data from ximenarosalesrealtor.com.',
+  all:'All areas',showing:'Showing',of:'of',props:'listings',beds:'bd',baths:'ba',sqft:'sq ft',built:'Built',view_full:'View full listing',ask:'Ask on WhatsApp',
+  wa_gen:"Hi Ximena, I found your website and I'd like to talk about buying or selling in Miami.",
+  wa_prop:'Hi Ximena, I\'m interested in {a} ({p}). Could you send me more details?',
+  hoa:'HOA',lot:'Lot',photo:'Photo',next:'Next photo',prev:'Previous photo',
+  Condominium:'Condo','Single Family Residence':'Single family',Townhouse:'Townhouse'},
+ es:{nav_feat:'Destacadas',nav_cat:'Propiedades',nav_areas:'Zonas',nav_about:'Sobre mí',nav_contact:'Contacto',
+  hero_eye:'Especialista en relocalización · Miami y sur de Florida',
+  hero_h1:'Encuentra tu hogar en <em>Miami</em>, con alguien que habla tu idioma.',
+  hero_lead:'Ximena ayuda a compradores y vendedores en Miami-Dade, Broward y Palm Beach, en inglés y español.',
+  cta_wa:'Escribir por WhatsApp',cta_cat:'Ver propiedades actuales',
+  feat_eye:'Las de mayor valor',feat_h:'Propiedades destacadas',feat_p:'Las propiedades más notables de la colección de Miami. Cada una abre su ficha completa.',
+  cat_eye:'Propiedades actuales',cat_h:'Propiedades en Miami',cat_sub:'Todas las propiedades del sur de Florida que aparecen en el sitio de Ximena, ordenadas por precio. Pregunta por cualquiera en WhatsApp.',
+  sort:'Orden',s_hi:'Precio: mayor a menor',s_lo:'Precio: menor a mayor',
+  disc:'Información de propiedades tal como se publica en ximenarosalesrealtor.com (feed SEF MLS). La información se considera confiable pero no está garantizada. Precios y disponibilidad pueden cambiar; abre cada ficha para ver el detalle vigente.',
+  z_eye:'Dónde trabaja',z_h:'Zonas del sur de Florida',z_mia:'Casas en venta en Miami',z_bro:'Búsqueda de propiedades en Broward',z_wpb:'Casas en venta en West Palm Beach',
+  ab_eye:'Sobre mí',ab_p1:'Agente inmobiliaria y experta en relocalización. Con más de 10 años de experiencia ayudando a clientes a comprar y vender casas en el área Triangle de Carolina del Norte y en el sur de Florida, se enfoca en un servicio al cliente de primer nivel.',
+  ab_p2:'Es Seller Representative Specialist certificada (SRS, certificación de NAR) y usa tecnología para ofrecer servicios más rápidos, eficientes y seguros.',
+  f_lang:'Inglés y español',f_yrs:'Más de 10 años en bienes raíces',
+  q1:'“Ximena es una profesional inmobiliaria de primera. Como hablante nativa de español que también domina el inglés, es versátil.”',
+  q2:'“Ximena fue de gran ayuda para vender mi casa. Estoy conforme con sus servicios y volveré a trabajar con ella.”',
+  q3:'“Queríamos mudarnos a Raleigh desde otro estado y Ximena se adaptó muy bien a nuestro ritmo. La recomiendo como agente de compra.”',
+  qn:'Extractos de reseñas de clientes en el sitio de Ximena (traducidos).',
+  c_eye:'Hablemos',c_h:'Cuéntale qué estás buscando',c_p:'Escribe en inglés o español. Te responderá con opciones que encajen con tu plan.',
+  foot:'Rediseño de demostración. Datos de propiedades de ximenarosalesrealtor.com.',
+  all:'Todas las zonas',showing:'Mostrando',of:'de',props:'propiedades',beds:'hab',baths:'baños',sqft:'pies²',built:'Año',view_full:'Ver ficha completa',ask:'Consultar por WhatsApp',
+  wa_gen:'Hola Ximena, vi tu sitio web y quisiera hablar sobre comprar o vender en Miami.',
+  wa_prop:'Hola Ximena, me interesa {a} ({p}). ¿Me puedes enviar más detalles?',
+  hoa:'HOA',lot:'Terreno',photo:'Foto',next:'Foto siguiente',prev:'Foto anterior',
+  Condominium:'Condominio','Single Family Residence':'Casa unifamiliar',Townhouse:'Townhouse'}
+};
+const FT_ES={'Waterfront':'Frente al agua','Pool':'Piscina','Private pool':'Piscina privada','Community pool':'Piscina comunitaria','Gated':'Comunidad cerrada','Fitness Center':'Gimnasio','Clubhouse':'Salón social','Sauna':'Sauna','Spa/Hot Tub':'Spa/jacuzzi','Tennis Court(s)':'Canchas de tenis','Basketball Court':'Cancha de baloncesto','Elevator(s)':'Ascensor','Playground':'Parque infantil','Cabana':'Cabaña','Barbecue':'Parrilla','Picnic Area':'Área de picnic','Boat Dock':'Muelle','Marina':'Marina','Billiard Room':'Sala de billar','Storage':'Bodega','Security Guard':'Seguridad','Key Card Entry':'Acceso con tarjeta','Water view':'Vista al agua','Bay view':'Vista a la bahía','Skyline view':'Vista al skyline','Lake view':'Vista al lago','Garden view':'Vista al jardín','Heated pool':'Piscina climatizada','Management':'Administración','Parking':'Estacionamiento','Maintenance':'Mantenimiento','Hot Water':'Agua caliente'};
+let lang='en';
+try{const s=localStorage.getItem('xr_lang');if(s==='es'||s==='en')lang=s;}catch(e){}
+const t=k=>I18N[lang][k]??I18N.en[k]??k;
+const ft=k=>lang==='es'?(FT_ES[k]||k):k;
+const money=n=>'$'+n.toLocaleString('en-US');
+const waLink=msg=>`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`;
+const split=s=>s?s.replace(/([a-z\)])([A-Z])/g,'$1|$2').split('|').map(x=>x.trim()).filter(Boolean):[];
+
+function features(p){
+  const out=[];
+  if(p.waterfront==='Yes')out.push('Waterfront');
+  const v=split(p.view).filter(x=>/Water|Ocean|Bay|Skyline|Lake|Garden/.test(x));
+  for(const x of v){ if(x==='Water'||x==='Ocean')out.push('Water view'); else if(x==='Bay')out.push('Bay view'); else if(x==='Skyline')out.push('Skyline view'); else if(x==='Lake')out.push('Lake view'); else if(x==='Garden')out.push('Garden view'); }
+  const pool=split(p.pool);
+  if(pool.includes('Private'))out.push('Private pool'); else if(pool.includes('Community')||pool.includes('Association'))out.push('Community pool');
+  const sec=split(p.security);
+  if(sec.includes('Gated Community')||sec.includes('Security Gate'))out.push('Gated');
+  if(sec.includes('Security Guard'))out.push('Security Guard');
+  const am=split(p.assocAmen).filter(x=>!['None','Other','Pool','Management','Trash','Parking','Hot Water','Maintenance'].includes(x));
+  for(const x of am)out.push(x);
+  return [...new Set(out)].slice(0,6);
+}
+const TYPE_ES={Condominium:'Condominio','Single Family Residence':'Casa unifamiliar',Townhouse:'Townhouse'};
+function fmtSq(s){return s?s.replace(' sqft',''):null}
+
+function card(p,i){
+  const big=i<3?' big':'';
+  const msg=t('wa_prop').replace('{a}',p.addr+', '+p.cityzip.split(',')[0]).replace('{p}',money(p.priceNum));
+  const imgs=p.imgs.map((im,k)=>`<img src="assets/${im.f}" alt="${p.addr}, ${p.cityzip.split(',')[0]} — ${t('photo')} ${k+1}" ${k===0?'':'loading="lazy"'} width="800" height="533" draggable="false">`).join('');
+  const many=p.imgs.length>1;
+  const sp=[`<span><b>${p.beds}</b> ${t('beds')}</span>`,`<span><b>${p.baths}</b> ${t('baths')}</span>`];
+  if(p.sqft)sp.push(`<span><b>${fmtSq(p.sqft)}</b> ${t('sqft')}</span>`);
+  if(p.year)sp.push(`<span>${t('built')} <b>${p.year}</b></span>`);
+  const fs=[];
+  fs.push(lang==='es'?(TYPE_ES[p.type]||p.type):(t(p.type)||p.type));
+  if(p.lot)fs.push(`${t('lot')} ${p.lot}`);
+  if(p.hoa)fs.push(`${t('hoa')} ${p.hoa}`);
+  for(const f of features(p))fs.push(ft(f));
+  return `<article class="card${big}" data-id="${p.id}">
+   <div class="car" data-n="${p.imgs.length}" data-i="0">
+     <div class="rail">${imgs}</div>
+     ${many?`<button class="ar p" aria-label="${t('prev')}">&#8249;</button><button class="ar n" aria-label="${t('next')}">&#8250;</button><div class="dots">${p.imgs.map((_,k)=>`<i class="${k?'':'on'}"></i>`).join('')}</div>`:''}
+     <span class="tag">${p.zone}</span>
+   </div>
+   <div class="cb">
+     <div class="price">${money(p.priceNum)}</div>
+     <div class="addr">${p.addr}</div>
+     <div class="zone">${p.cityzip}</div>
+     <div class="spec">${sp.join('')}</div>
+     <ul class="feats">${fs.map(x=>`<li>${x}</li>`).join('')}</ul>
+     <div class="acts">
+       <a class="btn btn-wa" href="${waLink(msg)}" target="_blank" rel="noopener">${t('ask')}</a>
+       <a class="lk" href="https://ximenarosalesrealtor.com${p.path}" target="_blank" rel="noopener">${t('view_full')}</a>
+     </div>
+   </div></article>`;
+}
+
+let zone='all',order='hi';
+function list(){
+  let a=DATA.filter(p=>zone==='all'||p.zone===zone);
+  a=a.slice().sort((x,y)=>order==='hi'?y.priceNum-x.priceNum:x.priceNum-y.priceNum);
+  return a;
+}
+function renderChips(){
+  const zs={};DATA.forEach(p=>zs[p.zone]=(zs[p.zone]||0)+1);
+  const names=Object.keys(zs).sort((a,b)=>zs[b]-zs[a]||a.localeCompare(b));
+  const el=document.getElementById('chips');
+  el.innerHTML=`<button class="chip" data-z="all" aria-pressed="${zone==='all'}">${t('all')} (${DATA.length})</button>`+names.map(n=>`<button class="chip" data-z="${n}" aria-pressed="${zone===n}">${n} (${zs[n]})</button>`).join('');
+}
+function renderGrid(){
+  const a=list();
+  document.getElementById('grid').innerHTML=a.map(card).join('');
+  document.getElementById('count').textContent=`${t('showing')} ${a.length} ${t('of')} ${DATA.length} ${t('props')}`;
+}
+function renderFeatured(){
+  const top=DATA.slice().sort((x,y)=>y.priceNum-x.priceNum).slice(0,6);
+  document.getElementById('hsTrack').innerHTML=top.map(p=>`<a class="fc" href="https://ximenarosalesrealtor.com${p.path}" target="_blank" rel="noopener"><img src="assets/${p.imgs[0].f}" alt="${p.addr}, ${p.cityzip.split(',')[0]}" loading="lazy" draggable="false"><div><div class="pz">${money(p.priceNum)}</div><div class="ad">${p.addr}, ${p.cityzip.split(',')[0]}</div><div class="sp">${p.beds} ${t('beds')} · ${p.baths} ${t('baths')}${p.sqft?' · '+fmtSq(p.sqft)+' '+t('sqft'):''}</div><span class="go">${t('view_full')} &rarr;</span></div></a>`).join('');
+}
+function applyLang(){
+  document.documentElement.lang=lang;
+  document.querySelectorAll('[data-i18n]').forEach(n=>{n.textContent=t(n.dataset.i18n);});
+  document.querySelectorAll('[data-i18n-html]').forEach(n=>{n.innerHTML=t(n.dataset.i18nHtml);});
+  document.querySelectorAll('.lang button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.lang===lang));
+  const gen=waLink(t('wa_gen'));['heroWa','contactWa','floatWa'].forEach(id=>document.getElementById(id).href=gen);
+  document.querySelectorAll('#sort option').forEach(o=>o.textContent=t(o.dataset.i18n));
+  renderChips();renderGrid();renderFeatured();
+  if(window.ScrollTrigger)ScrollTrigger.refresh();
+}
+document.querySelectorAll('.lang button').forEach(b=>b.addEventListener('click',()=>{lang=b.dataset.lang;try{localStorage.setItem('xr_lang',lang)}catch(e){}applyLang();}));
+document.getElementById('chips').addEventListener('click',e=>{const b=e.target.closest('.chip');if(!b)return;zone=b.dataset.z;renderChips();renderGrid();});
+document.getElementById('sort').addEventListener('change',e=>{order=e.target.value;renderGrid();});
+
+/* carousels: arrows + swipe */
+function go(car,idx){const n=+car.dataset.n;idx=(idx+n)%n;car.dataset.i=idx;car.querySelector('.rail').style.transform=`translateX(-${idx*100}%)`;car.querySelectorAll('.dots i').forEach((d,k)=>d.classList.toggle('on',k===idx));}
+const gridEl=document.getElementById('grid');
+gridEl.addEventListener('click',e=>{const b=e.target.closest('.ar');if(!b)return;const car=b.closest('.car');go(car,+car.dataset.i+(b.classList.contains('n')?1:-1));});
+let sx=null,sy=null,scar=null;
+gridEl.addEventListener('touchstart',e=>{const c=e.target.closest('.car');if(!c)return;scar=c;sx=e.touches[0].clientX;sy=e.touches[0].clientY;},{passive:true});
+gridEl.addEventListener('touchend',e=>{if(!scar)return;const dx=e.changedTouches[0].clientX-sx,dy=e.changedTouches[0].clientY-sy;if(Math.abs(dx)>40&&Math.abs(dx)>Math.abs(dy))go(scar,+scar.dataset.i+(dx<0?1:-1));scar=null;},{passive:true});
+let px=null,pcar=null;
+gridEl.addEventListener('pointerdown',e=>{if(e.pointerType==='touch')return;const c=e.target.closest('.car');if(!c||e.target.closest('.ar'))return;pcar=c;px=e.clientX;});
+window.addEventListener('pointerup',e=>{if(!pcar)return;const dx=e.clientX-px;if(Math.abs(dx)>50)go(pcar,+pcar.dataset.i+(dx<0?1:-1));pcar=null;});
+
+/* hero rotation */
+const slides=[...document.querySelectorAll('.hero .slides img')],bars=[...document.querySelectorAll('.hero-stats span')];
+let cur=0;
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(!reduce)setInterval(()=>{slides[cur].classList.remove('on');bars[cur].classList.remove('on');cur=(cur+1)%slides.length;slides[cur].classList.add('on');bars[cur].classList.add('on');},6000);
+
+/* nav bg */
+const nav=document.getElementById('nav');
+const onS=()=>nav.classList.toggle('solid',scrollY>40);addEventListener('scroll',onS,{passive:true});onS();
+
+/* reveal */
+const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(n=>io.observe(n));
+
+applyLang();
+
+/* pinned horizontal scroll (desktop) */
+if(window.gsap&&window.ScrollTrigger&&!reduce){
+  gsap.registerPlugin(ScrollTrigger);
+  ScrollTrigger.matchMedia({"(min-width: 901px)":function(){
+    const tr=document.getElementById('hsTrack'),hs=document.getElementById('hs');
+    const dist=()=>tr.scrollWidth-innerWidth;
+    gsap.to(tr,{x:()=>-dist(),ease:'none',scrollTrigger:{trigger:hs,start:'top 12%',end:()=>'+='+dist(),pin:true,scrub:.6,invalidateOnRefresh:true,anticipatePin:1}});
+  }});
+}
+</script>
+</body>
+</html>
